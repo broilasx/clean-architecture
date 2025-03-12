@@ -1,7 +1,12 @@
 package com.broilas.clean_architecture.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.broilas.clean_architecture.adapters.EmailSenderGateway;
+import com.broilas.clean_architecture.core.EmailSenderUseCase;
+
+@Service
 public class EmailSenderUseCaseImpl implements EmailSenderUseCase {
 
     private final EmailSenderGateway emailSenderGateway;
@@ -13,7 +18,7 @@ public class EmailSenderUseCaseImpl implements EmailSenderUseCase {
     
     @Override
     public void sendEmail(String to, String subject, String body) {
-        System.out.println("Sending email to " + to + " with subject " + subject + " and body " + body);
+        this.emailSenderGateway.sendEmail(to, subject, body);
     }
 
 }
