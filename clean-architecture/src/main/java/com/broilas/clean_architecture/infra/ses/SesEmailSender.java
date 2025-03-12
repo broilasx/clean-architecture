@@ -11,6 +11,7 @@ import com.amazonaws.services.simpleemail.model.Destination;
 import com.amazonaws.services.simpleemail.model.Message;
 import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 import com.broilas.clean_architecture.adapters.EmailSenderGateway;
+import com.broilas.clean_architecture.core.exceptions.EmailServiceException;
 
 @Service
 public class SesEmailSender implements EmailSenderGateway {
