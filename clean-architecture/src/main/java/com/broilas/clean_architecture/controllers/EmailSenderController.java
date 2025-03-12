@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.broilas.clean_architecture.application.EmailSenderUseCaseImpl;
+import com.broilas.clean_architecture.core.EmailRequest;
 import com.broilas.clean_architecture.core.exceptions.EmailServiceException;
 
 @RestController
